@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import leLongImg from "@/assets/le-long.jpg.asset.json";
+import zaloProofImg from "@/assets/zalo-proof.jpg.asset.json";
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import {
   AlertCircle,
