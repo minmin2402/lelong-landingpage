@@ -48,6 +48,7 @@ export const Route = createFileRoute("/")({
 const TARGET = new Date("2026-11-12T20:00:00+07:00").getTime();
 const TAKEN = 23;
 const MAX = 30;
+const ZALO_PROOF = "/__l5e/assets-v1/b8c1badc-4ef4-436d-86f4-9005a186bb1e/zalo-proof.jpg";
 const BANK_ACC = "0987654321";
 
 const NAV = [
@@ -229,7 +230,7 @@ function Index() {
           <div className={`${card} p-8 text-center md:col-span-2`}>
             <div className="relative mx-auto w-full max-w-xs">
               <img
-                src={leLongImg.url}
+                src={"/__l5e/assets-v1/ab995c56-d0fc-445e-a416-de03ecc7754c/le-long.jpg"}
                 alt="Chuyên gia Lê Long Marketing"
                 className="aspect-[3/4] w-full rounded-2xl object-cover object-top shadow-primary ring-4 ring-secondary"
               />
@@ -274,8 +275,8 @@ function Index() {
           <h3 className="text-center text-xl font-bold">
             Minh chứng thực tế: nhóm <span className="text-primary">791 thành viên</span>, người vào nhóm mỗi ngày
           </h3>
-          <a href={zaloProofImg.url} target="_blank" rel="noreferrer" className={`${card} mt-5 block overflow-hidden p-2`}>
-            <img src={zaloProofImg.url} alt="Ảnh chụp Zalo nhóm Nguyên Liệu MMO 791 thành viên" className="w-full rounded-lg" loading="lazy" />
+          <a href={ZALO_PROOF} target="_blank" rel="noreferrer" className={`${card} mt-5 block overflow-hidden p-2`}>
+            <img src={ZALO_PROOF} alt="Ảnh chụp Zalo nhóm Nguyên Liệu MMO 791 thành viên" className="w-full rounded-lg" loading="lazy" />
           </a>
           <p className="mt-2 text-center text-xs text-muted-foreground">Bấm vào ảnh để xem rõ hơn</p>
         </div>
