@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import leLongImg from "@/assets/le-long.jpg.asset.json";
+import zaloProofImg from "@/assets/zalo-proof.jpg.asset.json";
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import {
   AlertCircle,
@@ -46,6 +48,7 @@ export const Route = createFileRoute("/")({
 const TARGET = new Date("2026-11-12T20:00:00+07:00").getTime();
 const TAKEN = 23;
 const MAX = 30;
+const ZALO_PROOF = "/__l5e/assets-v1/b8c1badc-4ef4-436d-86f4-9005a186bb1e/zalo-proof.jpg";
 const BANK_ACC = "0987654321";
 
 const NAV = [
@@ -225,11 +228,13 @@ function Index() {
         <Heading eyebrow="Giảng viên" title="Giới thiệu chuyên gia Lê Long Marketing" />
         <div className="grid items-start gap-8 md:grid-cols-5">
           <div className={`${card} p-8 text-center md:col-span-2`}>
-            <div className="relative mx-auto h-32 w-32">
-              <div className="flex h-full w-full items-center justify-center rounded-full bg-primary text-4xl font-extrabold text-primary-foreground shadow-primary">
-                LL
-              </div>
-              <BadgeCheck className="absolute bottom-1 right-1 h-8 w-8 rounded-full bg-background text-primary" />
+            <div className="relative mx-auto w-full max-w-xs">
+              <img
+                src={"/__l5e/assets-v1/ab995c56-d0fc-445e-a416-de03ecc7754c/le-long.jpg"}
+                alt="Chuyên gia Lê Long Marketing"
+                className="aspect-[3/4] w-full rounded-2xl object-cover object-top shadow-primary ring-4 ring-secondary"
+              />
+              <BadgeCheck className="absolute -bottom-3 right-4 h-10 w-10 rounded-full bg-background text-primary" />
             </div>
             <h3 className="mt-5 flex items-center justify-center gap-1 text-xl font-bold">Lê Long Marketing</h3>
             <span className="mt-2 inline-block rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-secondary-foreground">
@@ -265,6 +270,15 @@ function Index() {
               ))}
             </div>
           </div>
+        </div>
+        <div className="mt-12">
+          <h3 className="text-center text-xl font-bold">
+            Minh chứng thực tế: nhóm <span className="text-primary">791 thành viên</span>, người vào nhóm mỗi ngày
+          </h3>
+          <a href={ZALO_PROOF} target="_blank" rel="noreferrer" className={`${card} mt-5 block overflow-hidden p-2`}>
+            <img src={ZALO_PROOF} alt="Ảnh chụp Zalo nhóm Nguyên Liệu MMO 791 thành viên" className="w-full rounded-lg" loading="lazy" />
+          </a>
+          <p className="mt-2 text-center text-xs text-muted-foreground">Bấm vào ảnh để xem rõ hơn</p>
         </div>
       </Section>
 
