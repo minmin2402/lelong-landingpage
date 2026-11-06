@@ -375,8 +375,8 @@ function Index() {
             ["20 ngày dùng thử MinZalo Pro được cấp khi nào và có bị giới hạn tính năng không?", "Được cấp ngay Buổi 1, full toàn bộ tính năng cao cấp nhất."],
             ["Nếu bận một buổi có được xem lại Record không?", "Có, toàn bộ 6 buổi đều được ghi hình HD và gửi link kèm tài liệu thực hành sau mỗi buổi."],
             ["Điều kiện để được hoàn lại 399.000đ học phí là gì?", "Sau khóa học, chỉ cần bạn nâng cấp lên Gói Năm của MinZalo, ban tổ chức sẽ hoàn lại 100% số tiền 399K vào tài khoản ngân hàng của bạn."],
-          ].map(([q, a]: string[]) => (
-            <Faq key={q} q={q} a={a} />
+          ].map(([q, a]) => (
+            <Faq key={q} q={q ?? ""} a={a ?? ""} />
           ))}
         </div>
       </Section>
